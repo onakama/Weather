@@ -13,7 +13,10 @@
 		5C7884CE28C31C34003E2C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884CC28C31C34003E2C6D /* Main.storyboard */; };
 		5C7884D028C31C35003E2C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884CF28C31C35003E2C6D /* Assets.xcassets */; };
 		5C7884D328C31C35003E2C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884D128C31C35003E2C6D /* LaunchScreen.storyboard */; };
-		5C7884DC28C31D93003E2C6D /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7884DB28C31D93003E2C6D /* YumemiWeather */; };
+		5CB4B7CA28C3735100AE718E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B7C928C3735100AE718E /* Model.swift */; };
+		5CB4B7CD28C379C000AE718E /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB4B7CC28C379C000AE718E /* YumemiWeather */; };
+		5CB4B7D028C379EB00AE718E /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB4B7CF28C379EB00AE718E /* YumemiWeather */; };
+		5CB4B7D328C37CD200AE718E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B7D228C37CD200AE718E /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		5C7884CF28C31C35003E2C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7884D228C31C35003E2C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7884D428C31C35003E2C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CB4B7C928C3735100AE718E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5CB4B7D228C37CD200AE718E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7884DC28C31D93003E2C6D /* YumemiWeather in Frameworks */,
+				5CB4B7CD28C379C000AE718E /* YumemiWeather in Frameworks */,
+				5CB4B7D028C379EB00AE718E /* YumemiWeather in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +67,22 @@
 				5C7884C628C31C34003E2C6D /* AppDelegate.swift */,
 				5C7884C828C31C34003E2C6D /* SceneDelegate.swift */,
 				5C7884CA28C31C34003E2C6D /* ViewController.swift */,
+				5CB4B7D128C37CAA00AE718E /* Data */,
+				5CB4B7C928C3735100AE718E /* Model.swift */,
 				5C7884CC28C31C34003E2C6D /* Main.storyboard */,
 				5C7884CF28C31C35003E2C6D /* Assets.xcassets */,
 				5C7884D128C31C35003E2C6D /* LaunchScreen.storyboard */,
 				5C7884D428C31C35003E2C6D /* Info.plist */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		5CB4B7D128C37CAA00AE718E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4B7D228C37CD200AE718E /* Weather.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,7 +102,8 @@
 			);
 			name = Weather;
 			packageProductDependencies = (
-				5C7884DB28C31D93003E2C6D /* YumemiWeather */,
+				5CB4B7CC28C379C000AE718E /* YumemiWeather */,
+				5CB4B7CF28C379EB00AE718E /* YumemiWeather */,
 			);
 			productName = Weather;
 			productReference = 5C7884C328C31C34003E2C6D /* Weather.app */;
@@ -117,7 +134,8 @@
 			);
 			mainGroup = 5C7884BA28C31C34003E2C6D;
 			packageReferences = (
-				5C7884DA28C31D93003E2C6D /* XCRemoteSwiftPackageReference "ios-training" */,
+				5CB4B7CB28C379C000AE718E /* XCRemoteSwiftPackageReference "ios-training" */,
+				5CB4B7CE28C379EB00AE718E /* XCRemoteSwiftPackageReference "ios-training" */,
 			);
 			productRefGroup = 5C7884C428C31C34003E2C6D /* Products */;
 			projectDirPath = "";
@@ -149,6 +167,8 @@
 				5C7884CB28C31C34003E2C6D /* ViewController.swift in Sources */,
 				5C7884C728C31C34003E2C6D /* AppDelegate.swift in Sources */,
 				5C7884C928C31C34003E2C6D /* SceneDelegate.swift in Sources */,
+				5CB4B7CA28C3735100AE718E /* Model.swift in Sources */,
+				5CB4B7D328C37CD200AE718E /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +388,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5C7884DA28C31D93003E2C6D /* XCRemoteSwiftPackageReference "ios-training" */ = {
+		5CB4B7CB28C379C000AE718E /* XCRemoteSwiftPackageReference "ios-training" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yumemi-inc/ios-training.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		5CB4B7CE28C379EB00AE718E /* XCRemoteSwiftPackageReference "ios-training" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yumemi-inc/ios-training.git";
 			requirement = {
@@ -379,9 +407,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5C7884DB28C31D93003E2C6D /* YumemiWeather */ = {
+		5CB4B7CC28C379C000AE718E /* YumemiWeather */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5C7884DA28C31D93003E2C6D /* XCRemoteSwiftPackageReference "ios-training" */;
+			package = 5CB4B7CB28C379C000AE718E /* XCRemoteSwiftPackageReference "ios-training" */;
+			productName = YumemiWeather;
+		};
+		5CB4B7CF28C379EB00AE718E /* YumemiWeather */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CB4B7CB28C379C000AE718E /* XCRemoteSwiftPackageReference "ios-training" */;
 			productName = YumemiWeather;
 		};
 /* End XCSwiftPackageProductDependency section */
