@@ -13,6 +13,7 @@
 		5C7884CE28C31C34003E2C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884CC28C31C34003E2C6D /* Main.storyboard */; };
 		5C7884D028C31C35003E2C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884CF28C31C35003E2C6D /* Assets.xcassets */; };
 		5C7884D328C31C35003E2C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7884D128C31C35003E2C6D /* LaunchScreen.storyboard */; };
+		5CA269E328C45224003D9C3F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA269E228C45224003D9C3F /* RootViewController.swift */; };
 		5CB4B7CA28C3735100AE718E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B7C928C3735100AE718E /* Model.swift */; };
 		5CB4B7CD28C379C000AE718E /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB4B7CC28C379C000AE718E /* YumemiWeather */; };
 		5CB4B7D028C379EB00AE718E /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB4B7CF28C379EB00AE718E /* YumemiWeather */; };
@@ -28,6 +29,7 @@
 		5C7884CF28C31C35003E2C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7884D228C31C35003E2C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7884D428C31C35003E2C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA269E228C45224003D9C3F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5CB4B7C928C3735100AE718E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5CB4B7D228C37CD200AE718E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,15 +68,24 @@
 			children = (
 				5C7884C628C31C34003E2C6D /* AppDelegate.swift */,
 				5C7884C828C31C34003E2C6D /* SceneDelegate.swift */,
-				5C7884CA28C31C34003E2C6D /* ViewController.swift */,
+				5CA269E428C455F2003D9C3F /* UI */,
 				5CB4B7D128C37CAA00AE718E /* Data */,
 				5CB4B7C928C3735100AE718E /* Model.swift */,
-				5C7884CC28C31C34003E2C6D /* Main.storyboard */,
 				5C7884CF28C31C35003E2C6D /* Assets.xcassets */,
 				5C7884D128C31C35003E2C6D /* LaunchScreen.storyboard */,
 				5C7884D428C31C35003E2C6D /* Info.plist */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		5CA269E428C455F2003D9C3F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5CA269E228C45224003D9C3F /* RootViewController.swift */,
+				5C7884CC28C31C34003E2C6D /* Main.storyboard */,
+				5C7884CA28C31C34003E2C6D /* ViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		5CB4B7D128C37CAA00AE718E /* Data */ = {
@@ -166,6 +177,7 @@
 			files = (
 				5C7884CB28C31C34003E2C6D /* ViewController.swift in Sources */,
 				5C7884C728C31C34003E2C6D /* AppDelegate.swift in Sources */,
+				5CA269E328C45224003D9C3F /* RootViewController.swift in Sources */,
 				5C7884C928C31C34003E2C6D /* SceneDelegate.swift in Sources */,
 				5CB4B7CA28C3735100AE718E /* Model.swift in Sources */,
 				5CB4B7D328C37CD200AE718E /* Weather.swift in Sources */,
