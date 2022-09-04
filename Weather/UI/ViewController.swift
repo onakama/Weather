@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var reloadButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reloadButtonAction(sender: UIButton) {
-        print("aaaaaa")
         let weatherCondition = YumemiWeather.fetchWeatherCondition()
-        print(weatherCondition)
         if weatherCondition == "sunny" {
             weatherImageView.image = UIImage(named: "Sunny")
             weatherImageView.tintColor = .red
@@ -36,8 +35,20 @@ class ViewController: UIViewController {
             weatherImageView.image = UIImage(named: "Sunny")
             weatherImageView.tintColor = .red
         }
+    }
+    
+    @IBAction func closeButtonAction(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
         
     }
-
 }
 
+extension ViewController {
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+    }
+}
