@@ -95,6 +95,8 @@
                     <navigationItem key="navigationItem" id="wrO-CW-u5Y"/>
                     <connections>
                         <outlet property="closeButton" destination="Dwf-CX-cRo" id="J6p-N1-ZBc"/>
+                        <outlet property="maxTemperatureLabel" destination="ZKu-Ly-heJ" id="FQ7-TM-riM"/>
+                        <outlet property="minTemperatureLabel" destination="2mt-GO-fKE" id="ytK-Q0-6sb"/>
                         <outlet property="reloadButton" destination="FJH-UE-Md5" id="Uf8-vr-QqK"/>
                         <outlet property="weatherImageView" destination="7o9-bt-bCl" id="5Ha-Fp-XUb"/>
                     </connections>

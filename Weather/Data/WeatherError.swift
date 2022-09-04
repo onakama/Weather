@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum WeatherError: Error {
+enum WeatherError: Error, Codable {
     case apiError
+    case decodeError
 }
