@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    deinit {
+        print("viewController deinit")
+    }
+    
     @IBAction func reloadButtonAction(sender: UIButton) {
         let weatherCondition = YumemiWeather.fetchWeatherCondition()
         if weatherCondition == "sunny" {
@@ -40,15 +44,5 @@ class ViewController: UIViewController {
     @IBAction func closeButtonAction(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         
-    }
-}
-
-extension ViewController {
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag, completion: completion)
-        guard let presentationController = presentationController else {
-            return
-        }
-        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
     }
 }
