@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(
+            self,selector: #selector(foreground(notification:)),
+            name: UIApplication.willEnterForegroundNotification,
+            object: nil
+        )
     }
     
     deinit {
@@ -27,6 +33,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reloadButtonAction(sender: UIButton) {
+        reload()
+    }
+    @IBAction func closeButtonAction(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    private func reload() {
         do {
             let model = WeatherModel()
             let response = try model.fatch()
@@ -37,9 +49,6 @@ class ViewController: UIViewController {
             errAlart(error)
             return
         }
-    }
-    @IBAction func closeButtonAction(sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
     }
     private func errAlart(_ error: Error) {
         var title = "タイトル"
@@ -59,7 +68,9 @@ class ViewController: UIViewController {
         alart.addAction(yesAction)
         present(alart, animated: true)
     }
-    
+    @objc func foreground(notification: Notification) {
+        reload()
+    }
 }
 
 extension UIImageView {
